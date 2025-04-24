@@ -1,0 +1,89 @@
+/* TicTacToe.css */
+
+:root {
+    --winning-boxes: grey;
+}
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Title styling */
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #fcf9f9;
+    transition: color 0.3s ease;
+}
+
+h1:hover {
+    color: transparent;
+}
+
+
+/* Game container */
+#gameboard {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+}
+
+/* Individual cell styling */
+.box {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: red;
+    color: black;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.box:nth-child(3n) {
+    border-right: none;
+}
+.box:nth-child(6) ~ .box {
+    border-bottom: none;
+}
+.box:hover {
+    background-color: darkred;
+}
+
+
+/* Game status message */
+.status {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    color: red;
+}
+
+/* Reset button */
+#restartBtn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: red;
+    color: black;
+    border: solid 2px rgb(255, 255, 255);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#restartBtn:hover {
+    background-color: rgb(250, 248, 248);
+}
